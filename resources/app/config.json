@@ -1,0 +1,26 @@
+{
+	"width": 20,
+	"height": 30,
+
+	// colors maximum is 6
+	"colors": 6,
+
+	// delay beetween moves in milliseconds
+	"moveDelay": 200,
+
+	// field can be random or array
+	// example: [[0, 1, 0], [1, 2, 3], [4, 1, 2]]
+	"field": "random",
+
+	// on move time limit in milliseconds
+	"oneMoveTimeLimit": 5000,
+
+	"strategies": [
+		// "User",
+		// "User",
+		"C:/Programs/Python-3/python.exe C:/Users/Jatana/CeilBattler/Connectors/Sample/sample_player.py",
+		"C:/Users/Jatana/CeilBattler/Connectors/Sample/a.exe"
+		// "C:/Programs/Python-3/python.exe C:/Users/Jatana/CeilBattler/Connectors/Sample/sample_player.py",
+		// "C:/Users/Jatana/CeilBattler/Connectors/Sample/another.exe"
+	]
+}

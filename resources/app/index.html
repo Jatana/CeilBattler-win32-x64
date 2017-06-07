@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CeilBattler</title>
+		<link rel="stylesheet/less" type="text/css" href="Scene/scene.less">
+		<link rel="stylesheet/less" type="text/css" href="styles/spinner.less">
+		<script src="less.js" type="text/javascript"></script>
+		<script src="jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<table id="game-panel">
+			<tr>
+				<td class="left-game-panel">
+					<div class="first-engine-name-info-panel">
+						<div id="first-engine-name"></div>
+						<div class="spinner" id="first-engine-spinner">
+							<div class="double-bounce1"></div>
+							<div class="double-bounce2"></div>
+						</div>
+					</div>
+					<div id="first-engine-points"></div>
+				</td>
+				<td id="play-field-panel">
+					
+				</td>
+				<td class="right-game-panel">
+					<div class="second-engine-name-info-panel">
+						<div id="second-engine-name"></div>
+						<div class="spinner" id="second-engine-spinner">
+							<div class="double-bounce1"></div>
+							<div class="double-bounce2"></div>
+						</div>
+					</div>
+					<div id="second-engine-points"></div>
+				</td>
+			</tr>
+		</table>
+		<table id="result-table">
+
+		</table>
+	</body>
+	<script>
+		require('./engine.js')
+	</script>
+</html>
