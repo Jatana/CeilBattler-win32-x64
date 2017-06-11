@@ -1,32 +1,27 @@
-# electron-quick-start
+CeilBattler Windows binary
+================
+ * [Run](#run)
+ * [Configure](#configure)
+ * [ConnectionProtocol](#connectionprotocol)
+ 
+### Run
+ * to run execute CeilBattler.exe
+ * to pause press <kbd>space</kdb>
+### Configure
+ * you can see and change configurations in `config.json`
+### ConnectionProtocol
+ * Connection realized via I/O streams
+ * Protocol:
+ 1. Your strategy print to stdout it's <kbd>name</kbd> in one line
+ 2. Next you strategy need to read from stdin <kbd>each</kbd> <kbd>width</kbd> <kbd>height</kbd> <kbd>colors</kbd>
+ * <kbd>each</kbd> is a 'first' or 'second' determines your strategy goes 'first' or 'second'
+ * <kbd>width</kbd> is a field width
+ * <kbd>height</kbd> is a field height
+ * <kbd>colors</kbd> is a count of colors used in field
+ 3. Sometimes your strategy gets <kbd>play</kbd> and then field.
+ 4. For each <kbd>play</kbd> and field your strategy need to print to stdout your <kbd>move</kbd>
+ * <kbd>move</kbd> is a integer in [0, colors)
+ * you can see examples for C++ and Python in `sample_player.cpp` and `sample_player.py`
 
-**Clone and run for a quick way to see an Electron in action.**
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start) within the Electron documentation.
-
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies and run the app
-npm install && npm start
-```
-
-Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/latest).
-
-#### License [CC0 (Public Domain)](LICENSE.md)
+write your questions and bugs to issues

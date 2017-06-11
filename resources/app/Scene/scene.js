@@ -13,15 +13,8 @@ module.exports = function(
 		secondEnginePath,
 		onEnd,
 		setNameFirst, setNameSecond) {
+
 	let oneCeilSize = 29;
-	let drawColors = [
-		"#3949AB",
-		"#43A047",
-		"#607D8B",
-		"#FB8C00",
-		"#F44336",
-		"#9C27B0"
-	];
 
 	let Point = function(x, y) {
 		this.x = x;
@@ -264,7 +257,7 @@ module.exports = function(
 
 		for (let i = 0; i < width; i++) {
 			for (let j = 0; j < height; j++) {
-				table[i][j].innerElem.style.background = drawColors[table[i][j].value];
+				table[i][j].innerElem.className = 'ceil-color-' + (table[i][j].value + 1);
 				table[i][j].innerElem.style.paddingTop = oneCeilSize + 'px';
 				table[i][j].innerElem.style.paddingLeft = oneCeilSize + 'px';
 			}

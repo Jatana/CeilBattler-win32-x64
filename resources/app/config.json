@@ -2,7 +2,7 @@
 	"width": 20,
 	"height": 30,
 
-	// colors maximum is 6
+	// colors maximum is 10
 	"colors": 6,
 
 	// delay beetween moves in milliseconds
@@ -15,12 +15,10 @@
 	// on move time limit in milliseconds
 	"oneMoveTimeLimit": 5000,
 
+	// strategies is a cmd or 'User' if you want to play manually
 	"strategies": [
 		// "User",
-		// "User",
-		"C:/Programs/Python-3/python.exe C:/Users/Jatana/CeilBattler/Connectors/Sample/sample_player.py",
-		"C:/Users/Jatana/CeilBattler/Connectors/Sample/a.exe"
-		// "C:/Programs/Python-3/python.exe C:/Users/Jatana/CeilBattler/Connectors/Sample/sample_player.py",
-		// "C:/Users/Jatana/CeilBattler/Connectors/Sample/another.exe"
+		"C:/Programs/Python-3/python.exe sample_player.py",
+		"a.exe"
 	]
 }

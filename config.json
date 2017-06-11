@@ -2,7 +2,7 @@
 	"width": 20,
 	"height": 30,
 
-	// colors maximum is 6
+	// colors maximum is 10
 	"colors": 6,
 
 	// delay beetween moves in milliseconds

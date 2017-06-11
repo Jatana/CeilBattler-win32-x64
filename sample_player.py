@@ -25,4 +25,3 @@ while True:
 				fprint(i)
 				break
 
-
