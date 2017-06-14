@@ -30,7 +30,7 @@ int main() {
 			for (int i = 0; i < colors; i++) {
 				if ((i != field[0][0])
 					&& (i != field[width - 1][height - 1])) {
-					cout << i << " " << " " << width << " " << height << " " << colors << endl;
+					cout << i << endl;
 					break;
 				}
 			}
