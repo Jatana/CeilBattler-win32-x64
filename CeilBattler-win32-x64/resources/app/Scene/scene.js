@@ -217,6 +217,19 @@ module.exports = function(
 		}
 	}
 
+	let handleMove = (move, sender) => {
+		if (((sender == 'first') ^ (firstMove)) == 1) {
+			alert(sender + ' send - ' + move + ' not in his move');
+			return false;
+		}
+		if (!tryMakeMove(move)) {
+			alert(sender + ' engine sends invalid move - ' + move);
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 	let propFirst = ["first", width, height, colors];
 	let FirstClass = ProgramConnector;
 	if (firstEnginePath == 'User') {
@@ -230,7 +243,7 @@ module.exports = function(
 			setNameFirst(name);
 			startGame();
 		}, (move) => {
-			return tryMakeMove(move);
+			return handleMove(move, 'first');
 		});
 	}, 100);
 
@@ -247,7 +260,7 @@ module.exports = function(
 			setNameSecond(name);
 			startGame();
 		}, (move) => {
-			return tryMakeMove(move);
+			return handleMove(move, 'second');
 		});
 	}, 100);
 
