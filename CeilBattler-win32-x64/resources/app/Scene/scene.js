@@ -14,7 +14,7 @@ module.exports = function(
 		onEnd,
 		setNameFirst, setNameSecond) {
 
-	let oneCeilSize = 29;
+	let oneCeilSize = 17;
 
 	let Point = function(x, y) {
 		this.x = x;
@@ -217,6 +217,13 @@ module.exports = function(
 		}
 	}
 
+	document.body.onkeydown = (event) => {
+		let key = parseInt(event.key);
+		if (key != NaN) {
+			tryMakeMove(key);
+		}
+	}
+
 	let handleMove = (move, sender) => {
 		if (((sender == 'first') ^ (firstMove)) == 1) {
 			alert(sender + ' send - ' + move + ' not in his move');
@@ -236,6 +243,7 @@ module.exports = function(
 		FirstClass = UserConnector;
 	}
 	let firstEngine;
+	let firstEngineOutput = document.getElementById('first-engine-output');
 	setTimeout(() => {
 		firstEngine = new FirstClass(firstEnginePath, propFirst, (name) => {
 			document.getElementById('first-engine-name').innerHTML = name;
@@ -244,6 +252,23 @@ module.exports = function(
 			startGame();
 		}, (move) => {
 			return handleMove(move, 'first');
+		}, (out) => {
+			if (firstEngineOutput.innerHTML.length > 3000) {
+				firstEngineOutput.innerHTML = "";
+			}
+			let elems = out.split(' ');
+			for (let elem of elems) {
+				let d = parseInt(elem);
+				let span = document.createElement('span');
+				span.innerHTML = elem;
+				if (d != NaN) {
+					if (0 <= d && d < colors) {
+						span.className = 'ceil-color-' + (d + 1);
+						span.style.padding = '3px';
+					}
+				}
+				firstEngineOutput.appendChild(span);
+			}
 		});
 	}, 100);
 
